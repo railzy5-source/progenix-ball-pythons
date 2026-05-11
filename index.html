@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Progenix Ball Pythons - High-end genetics, detailed breeding tracking, and surplus availability. Manage your collection with precision." />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Progenix Ball Pythons | Genetics Perfected</title>
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none"><defs><linearGradient id="g" x1="0" y1="120" x2="120" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="%2334d399"/><stop offset="1" stop-color="%230ea5e9"/></linearGradient></defs><path d="M60 10 L103.3 35 V85 L60 110 L16.7 85 V35 L60 10Z" stroke="url(%23g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="url(%23g)" fill-opacity="0.1"/><path d="M60 90 C 45 90, 35 75, 45 60 C 55 45, 65 45, 75 30" stroke="url(%23g)" stroke-width="8" stroke-linecap="round"/><path d="M75 30 L 68 22" stroke="url(%23g)" stroke-width="8" stroke-linecap="round"/><circle cx="68" cy="27" r="2" fill="white"/></svg>'>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              emerald: {
+                950: '#022c22',
+              },
+              slate: {
+                850: '#151f32', // Custom deep slate
+                950: '#020617', // Darker base
+              }
+            },
+            fontFamily: {
+              sans: ['"DM Sans"', 'sans-serif'],
+              display: ['Syne', 'sans-serif'],
+            },
+            animation: {
+                'fade-in': 'fadeIn 0.5s ease-out',
+                'stagger-in': 'staggerIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: '0', transform: 'translateY(10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+                staggerIn: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                }
+            },
+            screens: {
+                'print': {'raw': 'print'},
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+      
+      /* Smooth rendering */
+      * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+      
+      /* Display headings use Syne */
+      h1, h2, h3, .font-display { font-family: 'Syne', sans-serif; }
+      
+      /* Refined transitions */
+      .animate-fade-in { animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Glassmorphism Utilities */
+      .glass-panel {
+        background: rgba(30, 41, 59, 0.4); /* Slate 800 with opacity */
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      
+      .glass-card {
+        background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        
+        /* Whitelist specific print containers */
+        #print-bulk, #print-cage-single, #print-cage-single *,
+        #print-transfer, #print-transfer *,
+        #print-care, #print-care *,
+        #print-coa, #print-coa * {
+          visibility: visible;
+        }
+
+        /* Container Overrides to force display */
+        #print-bulk, #print-cage-single, #print-transfer, #print-care, #print-coa {
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          background: white;
+          color: black;
+          z-index: 9999;
+        }
+
+        /* Flex layouts */
+        #print-bulk, #print-cage-single, #print-coa {
+          display: flex !important;
+          align-items: center;
+          justify-content: center;
+        }
+
+        /* Block layouts */
+        #print-transfer, #print-care {
+          display: block !important;
+        }
+        
+        #print-care {
+            padding: 20px;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.574.0",
+    "react-qr-code": "https://esm.sh/react-qr-code@^2.0.18",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.96.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "html5-qrcode": "https://esm.sh/html5-qrcode@2.3.8"
+  }
+}
+</script>
+<link rel="stylesheet" href="/src/index.css">
+</head>
+  <body class="bg-[#0f172a] text-slate-100 transition-colors duration-300">
+    <div class="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-slate-950 to-black pointer-events-none"></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

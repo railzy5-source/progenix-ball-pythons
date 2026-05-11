@@ -1,0 +1,7 @@
+{
+  "name": "Progenix Ball Pythons",
+  "description": "A modern, responsive dashboard for managing a high-end ball python breeding collection, featuring genetic tracking, weight monitoring, and feeding schedules.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
